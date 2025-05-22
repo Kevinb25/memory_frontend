@@ -1,0 +1,35 @@
+.loginBorder {
+    margin-top: 2rem;
+    border: 3px solid #18110b;
+    border-radius: 4px;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    background-color: #18110b;
+
+}
+
+.loginForm {
+    width: auto;
+    border: 3px solid black;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+    background-color: #c1a987;
+    border-radius: 8px;
+    padding: 0.5rem;
+
+    h3 {
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 0.7rem;
+        margin-top: 0.3rem;
+    }
+
+}
+
+.loginContainer {
+    padding: 0.2rem;
+    border: 2px solid black;
+    background-color: #8a6b3d;
+    border-radius: 8px;
+}

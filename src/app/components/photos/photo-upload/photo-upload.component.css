@@ -1,0 +1,77 @@
+.containerBorder {
+    padding: 1rem;
+}
+
+.logo {
+    border: 2px solid #18110b;
+    background-color: #8a6b3d;
+    padding: 0.5rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #22150a;
+    color: #8a6b3d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 0.6rem;
+    border: 2px solid #8a6b3d;
+    text-align: center;
+}
+
+.photoForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.photoForm input {
+    padding: 0.4rem;
+    border: 2px solid #22150a;
+    border-radius: 8px;
+    transition: border-color 0.2s ease-in-out;
+    background-color: #c1a987;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #22150a;
+    margin-top: 0.6rem;
+}
+
+#note {
+    border-radius: 8px;
+    background-color: #c1a987;
+    margin-top: 0.6rem;
+    width: 97%;
+    height: 7rem;
+    border: 2px solid #22150a;
+
+    &::placeholder {
+        color: #22150a;
+        font-weight: bold;
+    }
+}
+
+input::placeholder {
+    color: #22150a;
+}
+
+button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #22150a;
+    color: #8a6b3d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 0.6rem;
+    border: 2px solid #8a6b3d;
+    text-align: center;
+}

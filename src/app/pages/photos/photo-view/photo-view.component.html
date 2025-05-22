@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="containerBorder">
+        <div class="logoContainer">
+            <div class="logo">
+                <img src="/images/logo_dorado.png" alt="logoMemory">
+                <h1>Memories</h1>
+            </div>
+        </div>
+    </div>
+    <div class="bordeExterno">
+        <div class="bordeInterno">
+            <div class="fondoImagen">
+                <div class="photo-view-container">
+                    <div class="photo">
+                        @if (loading) {
+                        <p>Cargando foto...</p>
+                        } @else if (error) {
+                        <p class="error">{{ error }}</p>
+                        } @else if (photo) {
+
+
+                        <div class="media-preview">
+                            @if (photo.photo_url.endsWith('.mp4')) {
+                            <video [src]="photo.photo_url" controls autoplay muted loop></video>
+                            } @else {
+                            <img [src]="photo.photo_url" [alt]="photo.title" />
+                            }
+                        </div>
+                        <div class="apano">
+                            @if (photo.title) {
+                            <h2>{{ photo.title}}</h2>
+                            }
+                            @if (photo.category) {
+                            <p><strong></strong> {{ photo.category}}</p>
+                            }
+                            @if (photo.taken_date) {
+                            <p>{{ photo.taken_date | date }}</p>
+                            }
+                        </div>
+                        <div class="infoPhoto">
+                            @if (photo.note) {
+                            <p> {{ photo.note }}</p>
+                            }
+
+                        </div>
+
+
+                        <button (click)="volver()">Volver</button>
+                        }
+                        <button class="btnDelete" (click)="eliminarFoto()">Eliminar Foto</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="dropdown-container">
+    <button class="toggle-button" (click)="toggleDropdown()">
+        Invitar <span>Usuario</span>
+    </button>
+
+    @if (isOpen) {
+    <div class="dropdown-panel">
+        <div class="preInternal">
+            <div class="internal">
+                <form (submit)="onSubmit($event)" class="formInvite">
+                    <label for="emailOrUsername"></label>
+                    <input id="emailOrUsername" placeholder="Email o Usuario" name="emailOrUsername" type="text" />
+
+                    <label for="role"></label>
+                    <select id="role" name="role">
+                        <option value="viewer">Solo ver</option>
+                        <option value="editor">Ver y subir</option>
+                    </select>
+
+                    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+                    <div class="button-row">
+                        <button type="submit" [disabled]="isSubmitting">Invitar</button>
+                        <button type="button" (click)="toggleDropdown()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+.albumCard {
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    background-color: #22150a;
+    justify-content: space-between;
+}
+
+.albumImage {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+    border: 1px solid #8a6b3d;
+
+}
+
+.imageAlbum {
+    align-content: center;
+}
+
+.albumsInfo {
+    align-content: center;
+
+    h4 {
+        color: #8a6b3d;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        color: #8a6b3d;
+
+    }
+}
+
+
+
+.containerBorder {
+    border: 3px solid #18110b;
+    border-radius: 4px;
+    padding: 0.1rem;
+    background-color: #18110b;
+    margin-bottom: 0.4rem;
+}

@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="containerBorder">
+        <div class="logoContainer">
+            <div class="logo">
+                @if (album) {
+                <div class="datos">
+                    <h2>{{ album.name }}</h2>
+                    @if (album.category) {
+                    <p>{{ album.category }}</p>
+                    }
+                </div>
+
+                <div class="qr">
+                    <div class="qrSection">
+                        <img *ngIf="qrBase64" [src]="qrBase64" alt="Código QR del álbum" />
+                        <button (click)="mostrarQrSeleccion()">Mostrar <span>QR</span></button>
+                    </div>
+                    <app-invite-user-modal [albumId]="album.id" (invited)="onUserInvited()" />
+                </div>
+
+                <div class="botonesBastaYa">
+                    <div class="borderButon">
+                        <div class="submitButon">
+                            @if (isAllowedToUpload) {
+                            <button (click)="mostrarModalUpload = true">
+                                @if (albumPhotos.length === 0) {
+                                Agregar primer recuerdo
+                                } @else {
+                                Agregar nuevo recuerdo
+                                }
+                            </button>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="borderButon2">
+                        @if (isOwner) {
+                        <button class="delete-button" (click)="eliminarAlbum()">Eliminar álbum</button>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    @if (canLeaveAlbum) {
+    <div class="submitButon">
+        <button class="leave-button" (click)="salirDelAlbum()">Salir del álbum</button>
+    </div>
+    }
+
+    @if (albumPhotos.length > 0) {
+    <app-photo-list [photos]="albumPhotos" (photoSelected)="abrirFoto($event)" />
+    } @else {
+    <p class="aunNo">Este álbum aún no tiene recuerdos.</p>
+    }
+
+    @if (mostrarModalUpload) {
+    <div class="modal-backdrop">
+        <div class="modal-content">
+            <app-photo-upload (photoFormSubmitted)="subirFotoDesdeFormulario($event)" />
+            <button class="close-button" (click)="mostrarModalUpload = false">Cerrar</button>
+        </div>
+    </div>
+    }
+</div>

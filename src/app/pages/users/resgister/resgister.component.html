@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="containerBorder">
+        <div class="logoContainer">
+            <div class="logo">
+                <img src="/images/logo_dorado.png" alt="logoMemory">
+                <h1>Memories</h1>
+            </div>
+        </div>
+    </div>
+    <div class="registerBorder">
+        <div class="registerContainer">
+            <div class="registerForm">
+                <h2>Registrate</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="inputDatos">
+                        <label for="inputUsername"></label>
+                        <input type="text" id="inputUsername" formControlName="username" placeholder="Username">
+                    </div>
+                    <div class="inputDatos">
+                        <label for="inputEmail"></label>
+                        <input type="email" id="inputEmail" formControlName="email" placeholder="Email">
+                    </div>
+                    <div class="inputDatos">
+                        <label for="inputPassword"></label>
+                        <input type="password" id="inputPassword" formControlName="password" placeholder="Password">
+                    </div>
+                    <div class="borderButon">
+                        <div class="submitButon">
+                            <input type="submit" value="REGISTRAR">
+                        </div>
+                    </div>
+                </form>
+                <p class="redirect-text">
+                    ¿Ya tienes cuenta?
+                    <a [routerLink]="['/login']">Inicia sesión aquí</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

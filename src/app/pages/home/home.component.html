@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="containerBorder">
+        <div class="logoContainer">
+            <div class="logo">
+                <img src="/images/logo_dorado.png" alt="logoMemory">
+                <h1>MEMORIES</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerHome">
+        @if (user) {
+        <app-user-card [user]="user"></app-user-card>
+        <app-album-create></app-album-create>
+        <app-album-list></app-album-list>
+        }
+    </div>
+
+    @if (pendingInvites.length > 0) {
+    <nav class="invitedNav">
+        <ul class="separacion">
+            @for (invite of pendingInvites; track invite.albumId) {
+            <li class="invitacion">
+                {{ invite.inviterUsername }} te ha invitado como
+                {{ invite.role === 'viewer' ? 'espectador' : 'participante' }}
+                al álbum <strong>{{ invite.albumName }}</strong>
+            </li>
+            <button (click)="aceptarInvitacion(invite.albumId)">Aceptar</button>
+            <button (click)="rechazarInvitacion(invite.albumId)">Rechazar</button>
+            }
+        </ul>
+    </nav>
+    } @else {
+    <p class="invitacionesNo">No tienes invitaciones pendientes.</p>
+    }
+</div>

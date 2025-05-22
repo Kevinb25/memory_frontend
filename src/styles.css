@@ -1,1 +1,193 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --primary-color: rgba(211, 200, 185, 1);
+    --secondary-color: rgba(98, 77, 61, 1);
+    --tertiary-color: rgba(168, 152, 138, 1);
+    --quaternary-color: rgba(151, 113, 72, 1);
+    --quinary-color: rgba(241, 224, 203, 1);
+}
+
+.container {
+    max-width: 1200px;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin: 0;
+    padding: auto;
+
+}
+
+/* body {
+    background-image: url('/images/cortezaMadera.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+} */
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/madera.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+
+}
+
+.background-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* equivale a top: 0; right: 0; bottom: 0; left: 0; */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Negro con opacidad */
+    z-index: 1;
+}
+
+body {
+    margin: 0;
+    background-color: #3e2a18;
+    /* o un tono oscuro de la madera */
+    height: 100%;
+    overflow: auto;
+    /* o visible */
+}

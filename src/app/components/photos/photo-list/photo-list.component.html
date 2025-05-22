@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="loginBorder">
+        <div class="loginContainer">
+            <div class="loginForm">
+                <div class="photoGrid">
+                    @for (photo of photos; track photo.id) {
+                    <div class="photoItem" (click)="selectPhoto(photo.id)">
+                        <div class="polaroidFrame">
+                            @if (photo.type === 'image') {
+                            <div class="mediaWrapper">
+                                <img [src]="photo.url" [alt]="photo.name" />
+                            </div>
+                            } @else {
+                            <div class="mediaWrapper">
+                                <video [src]="photo.url" muted autoplay loop></video>
+                            </div>
+                            }
+                            <div class="photoTitle">{{ photo.name }}</div>
+                        </div>
+                    </div>
+                    <div class="linea">
+                        <hr>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

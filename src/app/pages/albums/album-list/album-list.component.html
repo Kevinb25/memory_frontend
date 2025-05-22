@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="loginBorder">
+        <div class="loginContainer">
+            <div class="loginForm">
+                @if (ownedAlbums.length > 0) {
+
+                <h3>MY ALBUMS</h3>
+
+                <div class="albumsGrid">
+                    @for (album of ownedAlbums; track album.albumId) {
+                    <app-album-card [album]="album" (view)="goToAlbum($event)" />
+                    }
+                </div>
+
+                }
+
+                @if (sharedAlbums.length > 0) {
+                <h3>SHARED ALBUMS</h3>
+                <div class="albumsGrid">
+                    @for (album of sharedAlbums; track album.albumId) {
+                    <app-album-card [album]="album" (view)="goToAlbum($event)" />
+                    }
+                </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>

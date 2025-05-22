@@ -1,0 +1,96 @@
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-button {
+    background-color: #c1a987;
+    border: 2px solid black;
+    padding: 0.5rem;
+    color: #18110b;
+    font-weight: bold;
+    border-radius: 8px;
+
+    span {
+        margin-top: 0.1rem;
+        display: block;
+        color: #18110b;
+    }
+}
+
+.dropdown-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.preInternal {
+    border: 2px solid #18110b;
+    background-color: #18110b;
+    padding: 0.6rem;
+}
+
+.internal {
+    border-radius: 8px;
+    background-color: #8a6b3d;
+    border: 2px solid #22150a;
+}
+
+form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 0.4rem;
+    border-radius: 8px;
+    border: 1px solid #18110b;
+    background-color: #c1a987;
+    box-sizing: border-box;
+
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.formInvite {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input::placeholder {
+    color: #22150a;
+}
+
+button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #22150a;
+    color: #8a6b3d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid #8a6b3d;
+    text-align: center;
+}

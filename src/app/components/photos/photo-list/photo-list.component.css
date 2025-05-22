@@ -1,0 +1,87 @@
+.photoGrid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px;
+}
+
+.photoItem {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.polaroidFrame {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px 10px 14px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wrapper cuadrado */
+.mediaWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mediaWrapper img,
+.mediaWrapper video {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+/* Título */
+.photoTitle {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.loginContainer {
+    padding: 0.2rem;
+    border: 2px solid black;
+    background-color: #8a6b3d;
+    border-radius: 8px;
+}
+
+.loginBorder {
+    margin-top: 2rem;
+    border: 3px solid #18110b;
+    border-radius: 4px;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    background-color: #18110b;
+
+}
+
+.loginForm {
+    width: auto;
+    border: 3px solid black;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+    background-color: #c1a987;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.linea {
+
+    hr {
+        color: black;
+
+    }
+}

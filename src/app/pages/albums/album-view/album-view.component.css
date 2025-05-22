@@ -1,0 +1,182 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #18110b;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.close-button {
+
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.logoContainer {
+    padding: 0.2rem;
+    border: 2px solid black;
+    background-color: #8a6b3d;
+    border-radius: 8px;
+}
+
+.logo {
+    width: auto;
+    border: 3px solid black;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+    background-color: #22150a;
+    border-radius: 8px;
+    padding: 1rem;
+
+    h2 {
+        color: #c5a264;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    p {
+        color: #c5a264;
+        text-align: center;
+    }
+}
+
+
+
+.qr {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+}
+
+.qrSection {
+
+
+    img {
+        width: 120px;
+        display: flex;
+    }
+
+
+    button {
+        background-color: #c1a987;
+        border: 2px solid black;
+        padding: 0.5rem;
+        color: #18110b;
+        font-weight: bold;
+        border-radius: 8px;
+
+
+        span {
+            margin-top: 0.1rem;
+            display: block;
+            color: #18110b;
+        }
+    }
+}
+
+.submitButon {
+    display: flex;
+    justify-content: center;
+
+    button {
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        background-color: #22150a;
+        padding: 0.2rem;
+        color: #c5a264;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        border: 2px solid black;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+}
+
+.borderButon {
+    border: 3px solid black;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    background-color: #c5a264;
+
+
+}
+
+.datosAlbum {
+    align-content: center;
+}
+
+.aunNo {
+    color: #c5a264;
+    text-align: center;
+}
+
+.containerBorder {
+    border: 3px solid #18110b;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 0.2rem;
+    background-color: #18110b;
+
+}
+
+.close-button {
+    border-radius: 8px;
+    padding: 0.4rem;
+    border: 2px solid #c5a264;
+    margin-bottom: 0.6rem;
+    margin-left: 1rem;
+    background-color: #c1a987;
+    color: #18110b;
+    font-weight: bold;
+}
+
+.delete-button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #22150a;
+    padding: 0.2rem;
+    color: #c5a264;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+
+
+
+}
+
+.borderButon2 {
+    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+    background-color: #c5a264;
+    width: 60%;
+
+
+}
+
+.aunNo {
+    margin-top: 1.5rem;
+}

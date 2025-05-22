@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="containerBorder">
+        <div class="albumCard" (click)="emitView()">
+            <div class="imageAlbum">
+                <img [src]="albumImage" alt="Imagen del álbum" class="albumImage" />
+            </div>
+            <div class="albumsInfo">
+                <h4>{{ album.name }}</h4>
+                <p>{{ album.category || 'Sin categoría' }}</p>
+            </div>
+            <input type="file" #fileInput accept="image/*" (change)="onImageSelected($event)" class="selectFile"
+                hidden />
+
+        </div>
+    </div>
+</div>

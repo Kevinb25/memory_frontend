@@ -1,0 +1,28 @@
+<div class="containerBorder">
+    <div class="logoContainer2">
+        <div class="logo">
+            <form [formGroup]="form" (ngSubmit)="submit()" class="photoForm">
+                <label for="title">
+                    <input id="title" formControlName="title" type="text" placeholder="title" required />
+                </label>
+                <label for="note">
+                    <textarea id="note" formControlName="note" placeholder="note"></textarea>
+                </label>
+
+                <label for="category">
+                    <input id="category" formControlName="category" placeholder="category" type="text" />
+                </label>
+
+                <label for="file" class="file-label">
+                    Seleccionar archivo
+                    <input id="file" type="file" (change)="onFileChange($event)" accept="image/*,video/*" required />
+                </label>
+
+                <label for="takenDate">
+                    <input id="takenDate" formControlName="takenDate" type="date" required />
+                </label>
+                <button type="submit" [disabled]="form.invalid">Subir recuerdo</button>
+            </form>
+        </div>
+    </div>
+</div>

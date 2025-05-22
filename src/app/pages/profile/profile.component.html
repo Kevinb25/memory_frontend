@@ -1,0 +1,20 @@
+<div class="profile-container">
+    @if (user) {
+    <h2>Mi perfil</h2>
+
+    <div class="avatar-section">
+        <img [src]="user.avatarUrl || 'default-avatar.png'" alt="Avatar" width="100" height="100" />
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+        <button (click)="changeAvatar()" [disabled]="!selectedFile">Cambiar avatar</button>
+    </div>
+
+    <div class="username-section">
+        <p>Nombre actual: <strong>{{ user.username }}</strong></p>
+        <input type="text" [value]="newUsername" (input)="newUsername = $any($event.target).value"
+            placeholder="Nuevo nombre de usuario" />
+        <button (click)="changeUsername()" [disabled]="!newUsername.trim()">Actualizar nombre</button>
+    </div>
+    } @else {
+    <p>No hay sesión activa.</p>
+    }
+</div>

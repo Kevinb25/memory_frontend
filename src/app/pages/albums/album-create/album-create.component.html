@@ -1,0 +1,26 @@
+<div class="loginBorder">
+    <div class="loginContainer">
+        <div class="createAlbumContainer">
+            <form [formGroup]="albumForm" (ngSubmit)="onSubmit()" class="createForm">
+                <h2>NEW ALBUM</h2>
+                <label for="name"></label>
+                <input id="name" formControlName="name" class="inputDatos" placeholder="Title" type="text" />
+                @if (albumForm.get('name')?.invalid && albumForm.get('name')?.touched) {
+                <div class="error">
+                    El nombre es obligatorio y debe tener máximo 20 caracteres.
+                </div>
+                }
+                <!-- Categoría -->
+                <label for="category"></label>
+                <input id="category" class="inputDatos" formControlName="category" placeholder="Category" type="text" />
+
+                <button type="submit" [disabled]="albumForm.invalid || isSubmitting" class="submitButon">CREATE</button>
+            </form>
+
+            @if (errorMessage) {
+            <p class="error">{{ errorMessage }}</p>
+            }
+
+        </div>
+    </div>
+</div>

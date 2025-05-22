@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="containerCard">
+        @if (user) {
+
+        <div class="userSummaryCard">
+
+            <div class="containerCentered">
+                <div class="containerBorderMini">
+                    <div class="logoContainerMini">
+                        <nav class="perfil">
+                            <ul>
+                                <li>PROFILE</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="avatar">
+                <img [src]="userAvatar" alt="Avatar del usuario" />
+            </div>
+
+            <div class="containerCentered">
+                <div class="containerBorderMini">
+                    <div class="logoContainerMini">
+                        <nav class="logout">
+                            <ul>
+                                <li (click)="logout()">LOG OUT</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="userName">
+            <h2> {{user.username}}</h2>
+        </div>
+        }
+    </div>
