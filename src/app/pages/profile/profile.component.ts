@@ -31,7 +31,7 @@ export class ProfileComponent {
     formData.append('avatar', this.selectedFile);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/users/${this.user.id}/avatar`, {
+      const response = await fetch(`http://apiUrl/api/users/${this.user.id}/avatar`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -59,7 +59,7 @@ export class ProfileComponent {
     if (!this.user || !this.newUsername.trim()) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/api/users/${this.user.id}/username`, {
+      const response = await fetch(`http://apiUrl/api/users/${this.user.id}/username`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

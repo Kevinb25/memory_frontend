@@ -123,7 +123,7 @@ export class AlbumService {
   }
   async acceptInvitation(albumId: number, userId: number) {
     console.log('📤 Enviando aceptación de invitación:', { albumId, userId });
-    const response = await fetch(`http://localhost:3000/api/albums_users/accept`, {
+    const response = await fetch(`${environment.apiUrl}/albums_users/accept`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export class AlbumService {
     return data;
   }
   rejectInvitation(albumId: number, userId: number): Promise<Response> {
-    return fetch(`http://localhost:3000/api/albums_users/reject`, {
+    return fetch(`${environment.apiUrl}/albums_users/reject`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -178,7 +178,7 @@ export class AlbumViewComponent {
         if (!confirm.isConfirmed) return;
 
         try {
-            const response = await fetch(`http://localhost:3000/api/albums_users/leave`, {
+            const response = await fetch(`http://apiUrl/api/albums_users/leave`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

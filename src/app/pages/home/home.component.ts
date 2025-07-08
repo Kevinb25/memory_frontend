@@ -51,7 +51,7 @@ export class HomeComponent {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/api/albums_users/pending/${user.id}`, {
+      const response = await fetch(`http://apiUrl/api/albums_users/pending/${user.id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -89,7 +89,7 @@ export class HomeComponent {
     if (!confirm.isConfirmed) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/api/albums_users/reject`, {
+      const response = await fetch(`http://apiUrl/api/albums_users/reject`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

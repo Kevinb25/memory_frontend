@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
@@ -41,7 +42,7 @@ export class InviteUserModalComponent {
     this.errorMessage = '';
 
     try {
-      const response = await fetch(`http://localhost:3000/api/albums_users`, {
+      const response = await fetch(`${environment.apiUrl}/albums_users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
